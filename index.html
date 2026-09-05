@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Loop & Luxe — one-of-a-kind handmade jewellery, recreated with care in Ahmedabad, India.">
+  <title>Loop & Luxe | Recreated Jewellery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">Handmade in Ahmedabad · Shipping across India &amp; worldwide</div>
+  <header>
+    <a class="brand" href="#home" aria-label="Loop and Luxe home">LOOP <span>&amp;</span> LUXE<small>RECREATED JEWELLERY</small></a>
+    <nav aria-label="Primary"><a href="#shop">Shop</a><a href="#story">Our story</a><a href="#custom">Customise</a></nav>
+    <button id="cartButton" class="cart" aria-label="View bag">Bag <span id="cartCount">0</span></button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">HANDMADE · ONE OF A KIND · INDIA</p><h1>Every piece deserves<br><em>a second chance.</em></h1><p class="lede">One-of-a-kind jewellery lovingly recreated from fashion scraps and found details.</p><div class="actions"><a class="button" href="#shop">Shop the collection</a><a class="text-link" href="#custom">Create your own <span>→</span></a></div></div>
+      <div class="hero-image"><img src="077457265df3be42.jpg" alt="A selection of Loop and Luxe handmade jewellery"><div class="stamp">HANDMADE<br>WITH LOVE</div></div>
+    </section>
+
+    <section class="promise"><p>Small-batch pieces</p><i></i><p>Made to be cherished</p><i></i><p>₹200 delivery &amp; packaging</p></section>
+
+    <section id="shop" class="collection section"><div class="section-head"><div><p class="eyebrow">THE CURRENT EDIT</p><h2>Ready to wear</h2></div><p>Each piece is available only once.<br>When it’s gone, the story continues elsewhere.</p></div><div id="productGrid" class="product-grid"></div></section>
+
+    <section id="custom" class="custom section"><div><p class="eyebrow">MAKE IT YOURS</p><h2>Carry your story.</h2><p>Have an occasion, an old fabric, or a colour you love? Tell us your idea and we’ll create a piece that feels like yours.</p><ul><li>Made especially for you</li><li>Up to 10 business days to create</li><li>We’ll confirm the design and final price before payment</li></ul><button class="button light" data-open-custom>Start a custom order</button></div><img src="1e687dd03869e5e3.jpg" alt="Handmade pearl and black stone jewellery"></section>
+
+    <section id="story" class="story section"><img src="281c4a17582c8901.jpg" alt="Loop and Luxe handmade Indian jewellery"><div><p class="eyebrow">OUR SECOND CHANCE</p><h2>A family craft,<br>made personal.</h2><p>After ten years in her family’s handcrafted jewellery business, Kajal began Loop &amp; Luxe to give her creativity its own home. Every piece reimagines fashion scraps, details and memories into something new to wear.</p><a class="text-link" href="https://www.instagram.com/wearloopandluxe/" target="_blank" rel="noreferrer">Follow the making on Instagram <span>→</span></a></div></section>
+
+    <section class="details section"><article><h3>Shipping</h3><p>India delivery is ₹200 including packaging. Ready pieces are dispatched in 3–5 business days. International shipping is quoted after your location is confirmed.</p></article><article><h3>Thoughtful ordering</h3><p>Every Loop &amp; Luxe creation is handmade. We’ll confirm availability, delivery address and your final total on WhatsApp before sending a secure payment request.</p></article><article><h3>Need help?</h3><p>Write to <a href="mailto:wearloopandluxe@gmail.com">wearloopandluxe@gmail.com</a> or message us on WhatsApp. We’re happy to help you choose.</p></article></section>
+  </main>
+
+  <footer><a class="brand" href="#home">LOOP <span>&amp;</span> LUXE<small>RECREATED JEWELLERY</small></a><div><a href="https://www.instagram.com/wearloopandluxe/" target="_blank" rel="noreferrer">Instagram</a><a href="mailto:wearloopandluxe@gmail.com">Email</a><a href="https://wa.me/919099733579" target="_blank" rel="noreferrer">WhatsApp</a></div><p>© <span id="year"></span> Loop &amp; Luxe. Handmade in India.</p></footer>
+
+  <aside id="cartDrawer" class="drawer" aria-hidden="true"><div class="drawer-head"><h2>Your bag</h2><button class="close" data-close-cart aria-label="Close bag">×</button></div><div id="cartItems"></div><div id="cartEmpty" class="empty">Your bag is waiting for a piece with a past.</div><div class="cart-foot"><div><span>Pieces</span><strong id="cartTotal">₹0</strong></div><small>Delivery is calculated as ₹200 at confirmation.</small><button id="checkout" class="button">Order on WhatsApp</button></div></aside><div id="scrim" class="scrim"></div>
+
+  <dialog id="customDialog"><button class="close dialog-close" aria-label="Close">×</button><p class="eyebrow">CUSTOM ORDER</p><h2>Let’s create together.</h2><p>Share the starting point. This opens WhatsApp with your request so Kajal can guide you personally.</p><form id="customForm"><label>Your name<input required name="name" autocomplete="name"></label><label>What would you like to create?<select name="piece"><option>Earrings</option><option>Necklace</option><option>Bracelet / cuff</option><option>A surprise — help me decide</option></select></label><label>Colours, occasion or inspiration<textarea required name="idea" placeholder="For example: teal and gold earrings for a festive outfit"></textarea></label><button class="button" type="submit">Send my idea on WhatsApp</button></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
