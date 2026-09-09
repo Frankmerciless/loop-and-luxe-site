@@ -20,7 +20,7 @@ body {
     color: var(--ink);
     font-family: 'DM Sans', sans-serif;
     font-size: 15px;
-    line-height: 1.55
+    line-height: 1.6
 }
 
 a {
@@ -133,9 +133,9 @@ h3 {
 }
 
 .hero h1 {
-    font-size: clamp(43px, 5.3vw, 73px);
-    line-height: 1.04;
-    letter-spacing: -.045em;
+    font-size: clamp(44px, 5.3vw, 76px);
+    line-height: .98;
+    letter-spacing: -.05em;
     margin: 0
 }
 
@@ -145,10 +145,11 @@ h3 {
 }
 
 .lede {
-    max-width: 420px;
-    margin: 27px 0;
+    max-width: 440px;
+    margin: 27px 0 0;
     color: #58544e;
-    font-size: 17px
+    font-size: 17px;
+    line-height: 1.7
 }
 
 .hero-metrics {
@@ -270,14 +271,15 @@ h3 {
 }
 
 .section h2 {
-    font-size: 45px;
-    line-height: 1.08;
+    font-size: clamp(34px, 3vw, 48px);
+    line-height: 1.06;
     margin: 0;
-    letter-spacing: -.03em
+    letter-spacing: -.04em
 }
 
 .section-head>p {
     font-size: 13px;
+    line-height: 1.7;
     color: #706b63;
     margin: 0
 }
@@ -290,13 +292,15 @@ h3 {
 }
 
 .curated-copy h2 {
-    font-size: 54px
+    font-size: clamp(38px, 3.2vw, 58px)
 }
 
 .curated-copy p:not(.eyebrow) {
-    max-width: 460px;
+    max-width: 470px;
     color: #5f5a52;
-    margin-top: 15px
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.75
 }
 
 .feature-pills {
@@ -352,11 +356,12 @@ h3 {
 .mood-card img {
     width: 100%;
     height: 220px;
-    object-fit: contain;
+    object-fit: scale-down;
     object-position: center;
     display: block;
     background: #f6f0e7;
-    padding: 12px
+    padding: 12px;
+    box-sizing: border-box
 }
 
 .mood-card div {
@@ -373,7 +378,8 @@ h3 {
 }
 
 .mood-card strong {
-    font-size: 20px;
+    font-size: 22px;
+    line-height: 1.15;
     font-weight: 500;
     font-family: 'Playfair Display', serif
 }
@@ -396,80 +402,101 @@ h3 {
 
 .boutique-banner__content h2 {
     font-size: clamp(32px, 3vw, 52px);
-    line-height: 1.08;
-    margin: 0
+    line-height: 1.04;
+    margin: 0;
+    letter-spacing: -.04em
 }
 
 .boutique-banner__content p:not(.eyebrow) {
     color: #5f5a52;
-    margin: 12px 0 0
+    margin: 12px 0 0;
+    font-size: 16px;
+    line-height: 1.7
 }
 
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 19px
+    gap: 24px
 }
 
 .product {
-    position: relative
+    position: relative;
+    padding: 10px 10px 0;
+    transition: transform .25s ease
+}
+
+.product:hover {
+    transform: translateY(-2px)
 }
 
 .product-image {
-    background: var(--cream);
+    background: linear-gradient(180deg, #f7f1e8, #f0e8dd);
     aspect-ratio: 1/1.2;
-    overflow: hidden
+    overflow: hidden;
+    border: 1px solid rgba(38, 37, 32, .08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px 18px 10px 10px
 }
 
 .product-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: scale-down;
     object-position: center;
-    padding: 10px;
-    background: #f5efe6;
-    transition: transform .5s
+    padding: 18px;
+    background: transparent;
+    box-sizing: border-box;
+    transition: transform .5s ease, filter .3s ease
 }
 
 .product:hover img {
-    transform: scale(1.035)
+    transform: scale(1.045);
+    filter: saturate(1.05)
 }
 
 .product-info {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    padding-top: 13px
+    padding-top: 16px;
+    align-items: end
 }
 
 .product h3 {
     font-family: 'DM Sans';
-    font-weight: 500;
+    font-weight: 600;
     font-size: 13px;
+    letter-spacing: .01em;
     margin: 0
 }
 
 .product p {
     color: #746d62;
     font-size: 11px;
+    line-height: 1.6;
     margin: 3px 0
 }
 
 .price {
     font-size: 13px;
-    white-space: nowrap
+    white-space: nowrap;
+    font-weight: 700
 }
 
 .quick-add {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 12px;
     background: transparent;
     border: 1px solid var(--ink);
-    padding: 10px;
+    padding: 11px 10px;
     font-size: 9px;
     text-transform: uppercase;
     letter-spacing: .14em;
-    transition: all .2s ease
+    transition: all .2s ease;
+    border-radius: 999px
 }
 
 .quick-add:hover {
@@ -498,12 +525,16 @@ h3 {
 }
 
 .custom h2 {
-    font-size: 51px
+    font-size: clamp(38px, 3.5vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -.04em
 }
 
 .custom p:not(.eyebrow) {
     color: #ddd4c7;
-    max-width: 460px
+    max-width: 460px;
+    font-size: 16px;
+    line-height: 1.75
 }
 
 .custom ul {
@@ -515,7 +546,8 @@ h3 {
 .custom li {
     border-top: 1px solid #575449;
     padding: 10px 0;
-    font-size: 13px
+    font-size: 13px;
+    line-height: 1.7
 }
 
 .custom li:before {
@@ -532,11 +564,12 @@ h3 {
 .custom img {
     width: 100%;
     height: 445px;
-    object-fit: contain;
+    object-fit: scale-down;
     object-position: center;
     border-radius: 28px;
     background: #f5efe6;
     padding: 16px;
+    box-sizing: border-box;
     box-shadow: 0 22px 42px rgba(34, 29, 21, .12)
 }
 
@@ -551,15 +584,18 @@ h3 {
 .story img {
     width: 100%;
     aspect-ratio: 1;
-    object-fit: contain;
+    object-fit: scale-down;
     object-position: center;
     background: #f6f0e7;
-    padding: 12px
+    padding: 12px;
+    box-sizing: border-box
 }
 
 .story p:not(.eyebrow) {
     max-width: 400px;
-    color: #5d5952
+    color: #5d5952;
+    font-size: 16px;
+    line-height: 1.8
 }
 
 .details {
@@ -572,12 +608,14 @@ h3 {
 }
 
 .details h3 {
-    font-size: 20px;
+    font-size: clamp(22px, 1.8vw, 28px);
+    line-height: 1.2;
     margin: 0 0 10px
 }
 
 .details p {
     font-size: 13px;
+    line-height: 1.8;
     color: #5f5a52;
     margin: 0
 }
